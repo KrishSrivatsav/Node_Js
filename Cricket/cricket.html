@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="cricket.css">
+    <link rel="stylesheet" href="./bootstrap.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Cricket </title>
+</head>
+
+<body>
+    <script src="cricket.js">  </script>
+    <div class="container cont">
+        <div class="row">
+            <div class="col-xl-12">
+                <h1 style="text-align: center; font-size: 50px; "> IPL </h1>
+                <p style="text-align: center; font-size: 50px;font-size: 50px;"> CSK vs MI </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6 a">
+                <div class="card text-center bg-warning mb-3">
+                    <div class="card-header">
+                        <h1>Team 1</h1>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"> CSK </h5>
+                        <p id="yellow">Score :</p>
+                        <button class="btn btn-primary" id="bt1" style="padding-top: 15px;" href="#"  onclick="Team1()"> Bat
+                        </button>
+                    </div>
+                    <div class="card-footer text-muted">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 b">
+                <div class="card text-center bg-info mb-3">
+                    <div class="card-header">
+                        <h1>Team 2</h1>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"> MI </h5>
+                        <p id="blue"> Score : </p>
+                        <button  class="btn btn-secondary active"id="bt2"  style="padding-top: 15px;" href="#"onclick="Team2()" >
+                            Bat </button>
+                    </div>
+                    <div class="card-footer text-muted">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-xl-12 c">
+                <button class="btn btn-outline-danger" onclick="result()"> Result </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

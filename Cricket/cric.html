@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cri</title>
+</head>
+<body>
+    <div id="ipl">
+
+    </div>
+    <script>
+        var yellow = localStorage.getItem("cricket");
+        var blue = localStorage.getItem("match");
+        if(yellow > blue){
+            document.getElementById("ipl").innerText = "yellow wins";
+        }
+        else { 
+            document.getElementById("ipl").innerText = "blue wins";
+
+        }
+    </script>
+</body>
+</html>

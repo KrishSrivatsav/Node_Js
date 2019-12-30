@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Form</title>
+<style>
+body{
+    background-color: darkblue;
+}
+.formcls{
+    background-color:lightpink;
+    height: 400px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: vertical;
+    
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="formcls" >
+        <form onsubmit="mix(); return false;">
+            <label for="">Username</label>
+            <input type="text" id="username" >
+
+            <label for="">Age</label>
+            <input type="number" id="age" >
+
+            <label for="">email</label>
+            <input type="text" id="email">
+<!-- 
+            <select>
+
+                    <h1> Country <h1>
+                    <option value="in">India</option>
+                    <option value="am">America</option>
+                    <option value="rs">Russia</option>
+                    <option value="us">United States</option>
+            </select> -->
+
+            <input type="submit" value="submit" onclick="">
+        </form>
+    </div>
+<script>
+
+function mix() {
+  var username =document.getElementById('username').value;
+  var age =document.getElementById('age').value;
+  var email =document.getElementById('email').value;
+
+  var jsondata = {username,age,email};
+  console.log(jsondata);
+
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.open("POST","http://localhost:3000/savedata");
+
+  xhttp.setRequestHeader("Content-Type","application/json;charset=UTF-8");
+
+  xhttp.send(JSON.stringify(jsondata));
+
+}
+
+</script>
+
+</body>
+
+</html>
